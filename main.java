@@ -61,8 +61,18 @@ public class main {
             }
 
             ////////////////////////////////////////////////////////////////////////
-
-            String guess = scan.nextLine().toLowerCase();
+            
+            boolean nonstandardEntry = true;
+            String guess = "";
+            while(nonstandardEntry){
+                guess = scan.nextLine();
+                if(guess.length() == 5){
+                    nonstandardEntry = false;
+                }else{
+                    System.out.println("Enter a word with 5 characters");
+                }
+            }
+            guess = guess.toLowerCase();
             char[] char_buff = guess.toCharArray();
 
             int count = 0;
@@ -96,13 +106,8 @@ public class main {
             }else if(gCount == guesses-1){
                 System.out.println("You lost the game! The word is: " + word);
             }
-            
-            
-
-            
-
-
         }
+        scan.close();
         
 
 
