@@ -59,7 +59,7 @@ public class main {
             }else{
                 System.out.println("Enter your final guess:");
             }
-
+            
             ////////////////////////////////////////////////////////////////////////
             
             boolean nonstandardEntry = true;
